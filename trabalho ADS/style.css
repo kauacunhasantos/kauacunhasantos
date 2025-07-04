@@ -1,0 +1,215 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #101B21;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #0DA9E8;
+  text-decoration: underline;
+}
+
+/* Seções gerais */
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #d8f3ff;
+  border-radius: 8px;
+}
+
+/* Fotos circulares */
+.profile-photo, .project-photo, .contact-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 30px 60px 30px 0;
+  float: left;
+  overflow: hidden;
+}
+
+/* Rodapé fixo */
+footer {
+  background-color: #101B21;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+}
+
+/* Container flex do formulário */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* melhor para telas menores */
+  width: 100%;
+  min-height: 60vh;
+}
+
+/* Formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 70%;
+  max-width: 600px; /* Limita largura em telas grandes */
+}
+
+.formulario .title {
+  padding: 24px 32px;
+  font-size: 24px;
+  border-bottom: thin solid #ccc;
+}
+
+.formulario form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  padding: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+  border-radius: 8px;
+  background-color: #999;
+  border: 2px solid #999;
+  color: #ffffff;
+  padding-left: 16px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Ajusta larguras */
+.formulario input {
+  width: calc(50% - 8px);
+  height: 48px;
+}
+
+.formulario textarea {
+  width: 100%;
+  height: 180px;
+  padding: 16px;
+}
+
+/* Corrige foco */
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: #0516b3;
+  outline: none;
+}
+
+/* Específico */
+.formulario input[name=subject] {
+  width: 100%;
+}
+
+.formulario input:first-child {
+  margin-right: 16px;
+}
+
+/* Botão */
+.formulario button {
+  display: block;
+  width: 180px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background-color: #040d5c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #28044b;
+}
+
+/* Galeria */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  max-width: 300px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Links sociais (opcional, se tiver <ul class="social-links"> ) */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.social-links li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.social-links li i {
+  margin-right: 8px;
+}
